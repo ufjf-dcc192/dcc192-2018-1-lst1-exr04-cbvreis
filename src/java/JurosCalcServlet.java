@@ -42,8 +42,8 @@ public class JurosCalcServlet extends HttpServlet {
             
   
             out.println("<p>Para um investimento inicial de R$"
-                    + capital+" a uma taxa de juros compostos de "
-                    + taxa*100 +"% ao mês, você terá R$"
+                    + String.format("%.2f", capital)+" a uma taxa de juros compostos de "
+                    + String.format("%.2f", taxa*100) +"% ao mês, você terá R$"
                     + String.format("%.2f", montante) + " ao final de "
                     + tempo + " meses</p>");
                 

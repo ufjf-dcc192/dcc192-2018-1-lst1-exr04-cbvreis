@@ -43,8 +43,8 @@ public class JurosServlet extends HttpServlet {
             /*EXERCICIO B*/
             out.println("<h1> Exercício b)</h1>");
             out.println("<p>Para um investimento inicial de R$"
-                    + this.capital+" a uma taxa de juros compostos de "
-                    + this.taxa*100 +"% ao mês, você terá R$"
+                    + String.format("%.2f", this.capital)+" a uma taxa de juros compostos de "
+                    + String.format("%.2f", this.taxa*100) +"% ao mês, você terá R$"
                     + String.format("%.2f", this.montante) + " ao final de "
                     + this.tempo + " meses</p>");
                 
