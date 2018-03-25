@@ -33,7 +33,6 @@ public class JurosCalcServlet extends HttpServlet {
             /*EXERCICIO C*/
             out.println("<h1> Exercício c)</h1>");
 
-            /*EXERCICIO A*/
             out.println("<p>Montante final com juros compostos para 12 meses: R$" + String.format("%.2f", montante) + "</p>");
             /*ESPAÇAMENTO*/
             out.println("<br/>");
@@ -41,14 +40,20 @@ public class JurosCalcServlet extends HttpServlet {
             out.println("<hr>");
 
             
-            /*EXERCICIO B*/
+  
             out.println("<p>Para um investimento inicial de R$"
                     + capital+" a uma taxa de juros compostos de "
                     + taxa*100 +"% ao mês, você terá R$"
                     + String.format("%.2f", montante) + " ao final de "
                     + tempo + " meses</p>");
                 
-                        
+            if((montante-capital)/tempo >200){
+            
+            out.println("<p style= 'color:green'> Bom negócio");
+            }else{
+            
+            out.println("<p style= 'color:red'> Mal negócio");
+            }
                         
             out.println("</body>");
             out.println("</html>");
